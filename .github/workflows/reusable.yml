@@ -12,8 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     environment: ${{ inputs.environment }}
     steps:
-      - run: echo ${{ secrets.asecret }} 
+      - run: echo ${{ vars.avar }} ${{ secrets.asecret }} 
   test-access-secret-in-context:
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{ secrets.asecret }} 
+      - run: echo ${{ vars.avar }} ${{ secrets.asecret }} 
